@@ -76,7 +76,7 @@ export default () => {
           fontFamily: "Nurom-Bold",
           fontSizes: [10, 60],
           padding: 7,
-          transitionDuration: 500,
+          transitionDuration: 0,
         }}
         words={words.map((w) => ({ value: Math.random(), text: w }))}
       />
