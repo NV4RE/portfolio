@@ -3,6 +3,12 @@
   src: local("Nurom-Bold"), url("./fonts/Nurom-Bold.ttf") format("truetype");
 }
 
+* {
+  font-family: "Nurom-Bold", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
+}
+
 body {
   margin: 0;
   font-family: "Nurom-Bold", -apple-system, BlinkMacSystemFont, "Segoe UI",

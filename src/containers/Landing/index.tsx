@@ -16,12 +16,12 @@ const TransitionItem = styled.div`
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  font-family: "Nurom-Bold";
   font-size: 5em;
   font-weight: 800;
   text-transform: uppercase;
   will-change: transform, opacity, height;
   white-space: nowrap;
-  cursor: pointer;
   line-height: 80px;
 `;
 
@@ -45,12 +45,12 @@ export default () => {
   const reset = useCallback(() => {
     ref.current.map(clearTimeout);
     ref.current = [];
-    set([]);
-    ref.current.push(setTimeout(() => set(["Full-Stack", "Developer"]), 2000));
-    ref.current.push(setTimeout(() => set(["Researcher"]), 5000));
+    set(["Full-Stack", "Developer"]);
+    ref.current.push(setTimeout(() => set(["Researcher"]), 3000));
     ref.current.push(
-      setTimeout(() => set(["Embedded", "System", "Engineer"]), 8000)
+      setTimeout(() => set(["Embedded", "System", "Engineer"]), 6000)
     );
+    ref.current.push(setTimeout(reset, 9000));
   }, []);
 
   useEffect(() => {
@@ -60,7 +60,7 @@ export default () => {
   return (
     <Container>
       {transitions.map(({ item, props, key }) => (
-        <animated.div key={key} style={props} onClick={reset}>
+        <animated.div key={key} style={props}>
           <TransitionItem>{item}</TransitionItem>
         </animated.div>
       ))}
