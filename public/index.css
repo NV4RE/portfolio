@@ -1,0 +1,15 @@
+@font-face {
+  font-family: "Nurom-Bold";
+  src: local("Nurom-Bold"), url("./fonts/Nurom-Bold.ttf") format("truetype");
+}
+
+body {
+  margin: 0;
+  font-family: "Nurom-Bold", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  background-color: #1a1c20;
+}
