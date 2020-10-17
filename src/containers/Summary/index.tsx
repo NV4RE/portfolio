@@ -62,6 +62,8 @@ const words = [
   "OSM",
   "Tensorflow",
   "Or-tools",
+  "AWS",
+  "GCP",
 ];
 
 export default () => {
@@ -76,7 +78,7 @@ export default () => {
           fontFamily: "Nurom-Bold",
           fontSizes: [10, 60],
           padding: 7,
-          transitionDuration: 0,
+          transitionDuration: 500,
         }}
         words={words.map((w) => ({ value: Math.random(), text: w }))}
       />
