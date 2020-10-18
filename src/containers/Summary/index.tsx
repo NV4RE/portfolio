@@ -1,14 +1,14 @@
 import React from "react";
 import ReactWordcloud from "react-wordcloud";
 import styled from "styled-components";
+import Navigator from "../../components/Navigator";
 
 const Container = styled.div`
   display: flex;
-  flex: 1 1 100%;
-  flex-flow: column nowrap;
+  width: 100vw;
+  height: 100vh;
   justify-content: center;
   align-items: center;
-  height: 100vh;
 `;
 
 const words = [
@@ -71,17 +71,22 @@ export default () => {
     <Container>
       <ReactWordcloud
         options={{
-          rotations: 1,
-          rotationAngles: [0, 0],
-          enableOptimizations: true,
+          rotations: 3,
+          rotationAngles: [-45, 45],
+          enableOptimizations: false,
           enableTooltip: false,
           fontFamily: "Nurom-Bold",
-          fontSizes: [10, 60],
-          padding: 7,
-          transitionDuration: 500,
+          fontSizes: [
+            (window.innerWidth + window.innerHeight) / 90,
+            (window.innerWidth + window.innerHeight) / 40,
+          ],
+          padding: 6,
+          transitionDuration: 0,
+          colors: ["14274e", "#394867", "#9ba4b4", "#f1f6f9"],
         }}
         words={words.map((w) => ({ value: Math.random(), text: w }))}
       />
+      <Navigator />
     </Container>
   );
 };

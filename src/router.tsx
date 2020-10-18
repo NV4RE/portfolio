@@ -1,11 +1,9 @@
 import React from "react";
 import { Route, Switch, useLocation } from "react-router-dom";
-import { animated, useTransition } from "react-spring";
 import styled from "styled-components";
-import AboutMe from "./containers/Experiences";
+import Experiences from "./containers/Experiences";
 import Profile from "./containers/Profile";
 import Summary from "./containers/Summary";
-import Tinder from "./containers/Tinder";
 
 const Container = styled.div`
   padding: 0;
@@ -13,31 +11,34 @@ const Container = styled.div`
   width: 100vw;
   height: 100vh;
   overflow-x: hidden;
-  background-color: #1a1c20;
+  background: linear-gradient(14deg, #000000, #16222a, #14274e, #394867);
+  background-size: 400% 400%;
+  animation: gradient 20s ease infinite;
+  overflow: hidden;
+
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
 `;
 
 export default () => {
   const location = useLocation();
-  const transitions = useTransition(location, (location) => location.pathname, {
-    from: { opacity: 0 },
-    enter: { opacity: 1 },
-    leave: { opacity: 0 },
-    config: {
-      duration: 700,
-    },
-  });
+
   return (
     <Container>
-      {transitions.map(({ item, props, key }) => (
-        <animated.div key={key} style={props}>
-          <Switch location={item}>
-            <Route exact path="/" component={Profile} />
-            <Route exact path="/aboutme" component={AboutMe} />
-            <Route exact path="/summary" component={Summary} />
-            <Route exact path="/tinder" component={Tinder} />
-          </Switch>
-        </animated.div>
-      ))}
+      <Switch location={location}>
+        <Route exact path="/" component={Profile} />
+        <Route exact path="/experiences" component={Experiences} />
+        <Route exact path="/summary" component={Summary} />
+      </Switch>
     </Container>
   );
 };

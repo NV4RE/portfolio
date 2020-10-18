@@ -18,22 +18,6 @@ const Container = styled.div`
   height: 100vh;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(14deg, #000000, #16222a, #14274e, #394867);
-  background-size: 400% 400%;
-  animation: gradient 20s ease infinite;
-  overflow: hidden;
-
-  @keyframes gradient {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
-  }
 `;
 
 const Card = styled.div`
@@ -130,8 +114,8 @@ export default () => {
           improve teams and my productivities.
         </Paragraph>
         <Delay delay={5000}>
-          <ShakeCrazy h={2} v={2} r={5} q={20} fixed freez>
-            <Button onClick={() => history.push("/aboutme")}>
+          <ShakeCrazy h={2} v={2} r={5} q={15} fixed freez>
+            <Button onClick={() => history.push("/experiences")}>
               Want to know me better ?
             </Button>
           </ShakeCrazy>

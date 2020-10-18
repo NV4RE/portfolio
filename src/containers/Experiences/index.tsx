@@ -6,6 +6,7 @@ import {
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import styled from "styled-components";
+import Navigator from "../../components/Navigator";
 
 interface IExperience {
   avartar: string;
@@ -19,21 +20,6 @@ interface IExperience {
 const Container = styled.div`
   display: block;
   width: 100vw;
-  background: linear-gradient(90deg, #2c003e, #512b58);
-  background-size: 4000% 100%;
-  animation: gradient 5s ease infinite;
-
-  @keyframes gradient {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
-  }
 `;
 
 const experiences: IExperience[] = [
@@ -121,8 +107,8 @@ export default () => {
       <VerticalTimeline layout="1-column-left">
         {experiences.map((exp) => (
           <VerticalTimelineElement
-            className="vertical-timeline-element--work"
             date={formatDate(exp)}
+            contentStyle={{ background: "#f6f5f5", color: "#14274e" }}
             iconStyle={{
               backgroundImage: `url("${exp.avartar}")`,
               backgroundRepeat: "no-repeat",
@@ -137,6 +123,7 @@ export default () => {
           </VerticalTimelineElement>
         ))}
       </VerticalTimeline>
+      <Navigator next="/summary" />
     </Container>
   );
 };
