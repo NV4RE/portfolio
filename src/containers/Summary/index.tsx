@@ -78,7 +78,7 @@ export default () => {
           fontFamily: "Nurom-Bold",
           fontSizes: [
             (window.innerWidth + window.innerHeight) / 120,
-            (window.innerWidth + window.innerHeight) / 35,
+            (window.innerWidth + window.innerHeight) / 45,
           ],
           padding: 6,
           transitionDuration: 500,
