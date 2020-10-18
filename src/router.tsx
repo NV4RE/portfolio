@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Switch, useLocation } from "react-router-dom";
+import { Redirect, Route, Switch, useLocation } from "react-router-dom";
 import styled from "styled-components";
 import Experiences from "./containers/Experiences";
 import Profile from "./containers/Profile";
@@ -35,9 +35,12 @@ export default () => {
   return (
     <Container>
       <Switch location={location}>
-        <Route exact path="/" component={Profile} />
+        <Route exact path="/profile" component={Profile} />
         <Route exact path="/experiences" component={Experiences} />
         <Route exact path="/summary" component={Summary} />
+        <Route path="/">
+          <Redirect to="/profile" />
+        </Route>
       </Switch>
     </Container>
   );
