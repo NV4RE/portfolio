@@ -77,11 +77,11 @@ export default () => {
           enableTooltip: false,
           fontFamily: "Nurom-Bold",
           fontSizes: [
-            (window.innerWidth + window.innerHeight) / 90,
-            (window.innerWidth + window.innerHeight) / 40,
+            (window.innerWidth + window.innerHeight) / 120,
+            (window.innerWidth + window.innerHeight) / 35,
           ],
           padding: 6,
-          transitionDuration: 0,
+          transitionDuration: 500,
           colors: ["14274e", "#394867", "#9ba4b4", "#f1f6f9"],
         }}
         words={words.map((w) => ({ value: Math.random(), text: w }))}

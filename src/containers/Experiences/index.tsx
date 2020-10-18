@@ -20,6 +20,8 @@ interface IExperience {
 const Container = styled.div`
   display: block;
   width: 100vw;
+  height: 100%;
+  overflow: auto;
 `;
 
 const experiences: IExperience[] = [
