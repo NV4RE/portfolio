@@ -130,7 +130,7 @@ export default () => {
           improve teams and my productivities.
         </Paragraph>
         <Delay delay={5000}>
-          <ShakeCrazy h={2} v={2} r={3} q={10} fixed freez>
+          <ShakeCrazy h={2} v={2} r={5} q={20} fixed freez>
             <Button onClick={() => history.push("/aboutme")}>
               Want to know me better ?
             </Button>

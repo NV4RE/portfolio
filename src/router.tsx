@@ -1,7 +1,7 @@
 import React from "react";
 import { Route, Switch, useLocation } from "react-router-dom";
 import styled from "styled-components";
-import AboutMe from "./containers/AboutMe";
+import AboutMe from "./containers/Experiences";
 import Profile from "./containers/Profile";
 import Summary from "./containers/Summary";
 import Tinder from "./containers/Tinder";
@@ -11,7 +11,7 @@ const Container = styled.div`
   margin: 0;
   width: 100vw;
   height: 100vh;
-  overflow: hidden;
+  overflow-x: hidden;
   background-color: #1a1c20;
 `;
 
