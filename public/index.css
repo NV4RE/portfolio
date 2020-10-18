@@ -3,8 +3,14 @@
   src: local("Nurom-Bold"), url("./fonts/Nurom-Bold.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: "ModernSans-Light";
+  src: local("ModernSans-Light"),
+    url("./fonts/ModernSans-Light.otf") format("opentype");
+}
+
 * {
-  font-family: "Nurom-Bold", -apple-system, BlinkMacSystemFont, "Segoe UI",
+  font-family: "ModernSans-Light", -apple-system, BlinkMacSystemFont, "Segoe UI",
     "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
     "Helvetica Neue", sans-serif;
 }

@@ -1,9 +1,8 @@
 import React from "react";
 import { Route, Switch, useLocation } from "react-router-dom";
 import styled from "styled-components";
-import Menu from "./components/Menu";
 import AboutMe from "./containers/AboutMe";
-import Landing from "./containers/Landing";
+import Profile from "./containers/Profile";
 import Summary from "./containers/Summary";
 import Tinder from "./containers/Tinder";
 
@@ -49,13 +48,11 @@ export default () => {
   return (
     <Container>
       <Switch location={location}>
-        <Route exact path="/" component={Landing} />
+        <Route exact path="/" component={Profile} />
         <Route exact path="/aboutme" component={AboutMe} />
         <Route exact path="/summary" component={Summary} />
         <Route exact path="/tinder" component={Tinder} />
       </Switch>
-
-      <Menu center={["/"].includes(location.pathname)} />
     </Container>
   );
 };
