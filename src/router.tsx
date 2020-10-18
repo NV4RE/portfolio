@@ -1,5 +1,6 @@
 import React from "react";
 import { Route, Switch, useLocation } from "react-router-dom";
+import { animated, useTransition } from "react-spring";
 import styled from "styled-components";
 import AboutMe from "./containers/Experiences";
 import Profile from "./containers/Profile";
@@ -15,44 +16,28 @@ const Container = styled.div`
   background-color: #1a1c20;
 `;
 
-// export default () => {
-//   const location = useLocation();
-//   const transitions = useTransition(location, (location) => location.pathname, {
-//     from: { opacity: 0 },
-//     enter: { opacity: 1 },
-//     leave: { opacity: 0 },
-//     config: {
-//       delay: 0,
-//       duration: 0,
-//     },
-//   });
-
-//   return (
-//     <>
-//       <Link to="/">home</Link>
-//       <Link to="/summary">summary</Link>
-//       {transitions.map(({ item, props, key }) => (
-//         <animated.div key={key} style={props}>
-//           <Switch location={item}>
-//             <Route exact path="/" component={Landing} />
-//             <Route exact path="/summary" component={Summary} />
-//           </Switch>
-//         </animated.div>
-//       ))}
-//     </>
-//   );
-// };
-
 export default () => {
   const location = useLocation();
+  const transitions = useTransition(location, (location) => location.pathname, {
+    from: { opacity: 0 },
+    enter: { opacity: 1 },
+    leave: { opacity: 0 },
+    config: {
+      duration: 700,
+    },
+  });
   return (
     <Container>
-      <Switch location={location}>
-        <Route exact path="/" component={Profile} />
-        <Route exact path="/aboutme" component={AboutMe} />
-        <Route exact path="/summary" component={Summary} />
-        <Route exact path="/tinder" component={Tinder} />
-      </Switch>
+      {transitions.map(({ item, props, key }) => (
+        <animated.div key={key} style={props}>
+          <Switch location={item}>
+            <Route exact path="/" component={Profile} />
+            <Route exact path="/aboutme" component={AboutMe} />
+            <Route exact path="/summary" component={Summary} />
+            <Route exact path="/tinder" component={Tinder} />
+          </Switch>
+        </animated.div>
+      ))}
     </Container>
   );
 };
