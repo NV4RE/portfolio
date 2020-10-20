@@ -86,7 +86,7 @@ export default () => {
         }}
         words={words.map((w) => ({ value: Math.random(), text: w }))}
       />
-      <Navigator />
+      <Navigator next="/contact" />
     </Container>
   );
 };

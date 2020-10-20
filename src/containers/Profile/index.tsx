@@ -1,15 +1,6 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
-import { ShakeCrazy } from "reshake";
 import styled from "styled-components";
-import Delay from "../../components/Delay";
-import {
-  Github,
-  Gitlab,
-  Gmail,
-  Instagram,
-  Linkedin,
-} from "../../components/Icon";
 import profile from "../../resources/images/profile.jpg";
 
 const Container = styled.div`
@@ -28,7 +19,7 @@ const Card = styled.div`
   align-items: center;
   background-color: #fbf7f0;
   border: 0px solid #fbf7f0;
-  border-radius: 13px;
+  border-radius: 8px;
   box-shadow: 3px 10px 27px -8px rgba(0, 0, 0, 0.9);
   padding: 2rem;
   margin: 0 40px;
@@ -36,7 +27,7 @@ const Card = styled.div`
 
 const ProfilePicture = styled.img`
   border-radius: 50%;
-  box-shadow: 5px 7px 25px -6px rgba(0, 0, 0, 0.9);
+  box-shadow: 4px 6px 20px -6px rgba(0, 0, 0, 0.9);
   height: 8rem;
   margin: 0 0 15px 0;
 `;
@@ -58,32 +49,10 @@ const Title = styled.p`
   color: #555555;
 `;
 
-const Paragraph = styled.p`
-  padding: 2px 0 4px 0;
-  margin: 0;
-  font-size: 1rem;
-  font-weight: 100;
-  word-wrap: break-word;
-  color: #1a1c20;
-`;
-
-const Links = styled.div`
-  display: flex;
-  flex-flow: row nowrap;
-  margin: 10px 0 18px 0;
-  border-radius: 8px;
-  background-color: #1b262c;
-  box-shadow: 3px 4px 10px -3px rgba(0, 0, 0, 0.9);
-
-  & > * {
-    margin: 2px 3px;
-  }
-`;
-
 const Button = styled.div`
   font-family: "Nurom-Bold";
   padding: 8px 14px;
-  margin: 20px 0;
+  margin: 20px 0 0 0;
   border-radius: 4px;
   background-color: #1b262c;
   box-shadow: 3px 4px 10px -3px rgba(0, 0, 0, 0.9);
@@ -100,26 +69,10 @@ export default () => {
 
         <Name>Tossaporn Temsong</Name>
         <Title>Full-Stack Developer</Title>
-        <Links>
-          <Github link="https://github.com/NV4RE" />
-          <Gitlab link="https://gitlab.com/NV4RE" />
-          <Gmail link="mailto:t.temsong@gmail.com" />
-          <Linkedin link="https://www.linkedin.com/in/t-temsong/" />
-          <Instagram link="https://www.instagram.com/nv.4re/" />
-        </Links>
-        <Paragraph>
-          A dedicated and reliable full-stack developer with 4+ years experience
-          in web development, delivered monolith and microservice projects on
-          production, experience pain points and always seeking to further
-          improve teams and my productivities.
-        </Paragraph>
-        <Delay delay={5000}>
-          <ShakeCrazy h={2} v={2} r={5} q={15} fixed freez>
-            <Button onClick={() => history.push("/experiences")}>
-              Want to know me better ?
-            </Button>
-          </ShakeCrazy>
-        </Delay>
+
+        <Button onClick={() => history.push("/aboutme")}>
+          Know me better ?
+        </Button>
       </Card>
     </Container>
   );
