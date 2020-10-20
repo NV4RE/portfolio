@@ -1,5 +1,4 @@
 import React from "react";
-import { Shake } from "reshake";
 import styled from "styled-components";
 import github from "../../resources/svg/github.svg";
 import gitlab from "../../resources/svg/gitlab.svg";
@@ -21,11 +20,7 @@ const Image = (
     HTMLImageElement
   >
 ) => {
-  return (
-    <Shake h={2} v={3} r={1}>
-      <Img {...props} />
-    </Shake>
-  );
+  return <Img {...props} />;
 };
 
 export const Github = (props: IProps) => {
