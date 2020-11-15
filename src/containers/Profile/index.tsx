@@ -27,7 +27,6 @@ const Card = styled.div`
 
 const ProfilePicture = styled.img`
   border-radius: 50%;
-  box-shadow: 4px 6px 20px -6px rgba(0, 0, 0, 0.9);
   height: 8rem;
   margin: 0 0 15px 0;
 `;
@@ -55,7 +54,6 @@ const Button = styled.div`
   margin: 20px 0 0 0;
   border-radius: 4px;
   background-color: #1b262c;
-  box-shadow: 3px 4px 10px -3px rgba(0, 0, 0, 0.9);
   color: #f6f6f6;
   cursor: pointer;
 `;
@@ -70,7 +68,7 @@ export default () => {
         <Name>Tossaporn Temsong</Name>
         <Title>Full-Stack Developer</Title>
 
-        <Button onClick={() => history.push("/aboutme")}>
+        <Button className="hvr-grow" onClick={() => history.push("/aboutme")}>
           Know me better ?
         </Button>
       </Card>

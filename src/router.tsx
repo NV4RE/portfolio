@@ -1,3 +1,4 @@
+import "hover.css/css/hover-min.css";
 import React from "react";
 import { Redirect, Route, Switch, useLocation } from "react-router-dom";
 import styled from "styled-components";
@@ -13,10 +14,9 @@ const Container = styled.div`
   width: 100vw;
   height: 100vh;
   overflow-x: hidden;
-  background: linear-gradient(35deg, #000000, #16222a, #14274e);
+  background: linear-gradient(35deg, #000000, #16222a, #102245);
   background-size: 300vw;
   animation: gradient 50s ease infinite;
-  overflow: hidden;
 
   @keyframes gradient {
     0% {
