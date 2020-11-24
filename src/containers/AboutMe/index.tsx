@@ -30,8 +30,8 @@ export default () => {
             living in Bangkok, Thailand.
           </Paragraph>
           <Paragraph>
-            Experienced in frontend, backend, and researcher, with web
-            development being one of my strongest skills, being proactive to the
+            Experienced in full-stack developer, and researcher, with web
+            development are one of my strongest skills, being proactive to the
             client’s needs and understanding their businesses, I have completed
             and delivered multiple projects to clients within budget and in a
             timely manner.
@@ -39,7 +39,7 @@ export default () => {
           <Paragraph>
             On a personal level, you can never have enough knowledge, keeping up
             with the latest technology and willing to take on new challenges
-            with a ‘Can Do’ attitude. In my free time, I either workout at the
+            with a “Can Do” attitude. In my free time, I either workout at the
             gym or shoot street photography with my trusted camera.
           </Paragraph>
           <Paragraph>
