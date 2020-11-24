@@ -3,6 +3,8 @@ import { useHistory } from "react-router-dom";
 import styled from "styled-components";
 import Body from "../../components/Body";
 import Button from "../../components/Button";
+import Tag from "../../components/Tag";
+import { Big } from "../../components/Typography";
 import profile from "../../resources/images/profile.jpg";
 
 const Container = styled.div`
@@ -19,23 +21,6 @@ const ProfilePicture = styled.img`
   margin: 0 0 15px 0;
 `;
 
-const Name = styled.p`
-  font-family: "Nurom-Bold";
-  padding: 2px 0 4px 0;
-  margin: 0;
-  font-size: 1.4rem;
-  white-space: nowrap;
-`;
-
-const Title = styled.p`
-  padding: 2px 0;
-  margin: 0;
-  font-size: 1rem;
-  white-space: nowrap;
-  font-weight: 800;
-  color: #555555;
-`;
-
 export default () => {
   const history = useHistory();
   return (
@@ -43,8 +28,8 @@ export default () => {
       <Body>
         <ProfilePicture src={profile} />
 
-        <Name>Tossaporn Temsong</Name>
-        <Title>Full-Stack Developer</Title>
+        <Big>Tossaporn Temsong</Big>
+        <Tag>Full-Stack Developer</Tag>
 
         <Button className="hvr-grow" onClick={() => history.push("/aboutme")}>
           Know me better ?
