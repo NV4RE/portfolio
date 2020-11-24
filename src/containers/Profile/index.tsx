@@ -3,17 +3,10 @@ import { useHistory } from "react-router-dom";
 import styled from "styled-components";
 import Body from "../../components/Body";
 import Button from "../../components/Button";
+import Container from "../../components/Container";
 import Tag from "../../components/Tag";
 import { Big } from "../../components/Typography";
 import profile from "../../resources/images/profile.jpg";
-
-const Container = styled.div`
-  display: flex;
-  width: 100vw;
-  height: 100vh;
-  justify-content: center;
-  align-items: center;
-`;
 
 const ProfilePicture = styled.img`
   border-radius: 50%;

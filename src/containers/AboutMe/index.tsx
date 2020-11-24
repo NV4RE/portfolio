@@ -2,16 +2,9 @@ import React from "react";
 import { MdApps } from "react-icons/md";
 import styled from "styled-components";
 import Body from "../../components/Body";
+import Container from "../../components/Container";
 import Navigator from "../../components/Navigator";
 import { Big, Paragraph, Title } from "../../components/Typography";
-
-const Container = styled.div`
-  display: flex;
-  width: 100vw;
-  height: 100vh;
-  justify-content: center;
-  align-items: center;
-`;
 
 const Content = styled.div`
   display: flex;

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { MdCall } from "react-icons/md";
 import styled from "styled-components";
 import Body from "../../components/Body";
+import Container from "../../components/Container";
 import Navigator from "../../components/Navigator";
 import Tag from "../../components/Tag";
 
@@ -10,14 +11,6 @@ interface ISkill {
   alias: string[];
   experienced: boolean;
 }
-
-const Container = styled.div`
-  display: flex;
-  width: 100vw;
-  height: 100vh;
-  justify-content: center;
-  align-items: center;
-`;
 
 const Input = styled.input`
   box-sizing: border-box;

@@ -6,18 +6,10 @@ import {
   FiLinkedin,
   FiMail,
 } from "react-icons/fi";
-import styled from "styled-components";
 import Body from "../../components/Body";
+import Container from "../../components/Container";
 import Icon from "../../components/Icon";
 import Navigator from "../../components/Navigator";
-
-const Container = styled.div`
-  display: flex;
-  width: 100vw;
-  height: 100vh;
-  justify-content: center;
-  align-items: center;
-`;
 
 export default () => {
   return (
