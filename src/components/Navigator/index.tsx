@@ -1,41 +1,34 @@
 import React from "react";
+import { MdArrowBack, MdHome } from "react-icons/md";
 import { useHistory } from "react-router-dom";
 import styled from "styled-components";
-import back from "../../resources/svg/back.svg";
-import next from "../../resources/svg/next.svg";
+import Button from "../Button";
 
-const Container = styled.footer`
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100vw;
-  pointer-events: none;
+const Between = styled.div`
   display: flex;
+  flex: 1 0 100%;
+  width: 100%;
   justify-content: space-between;
-  align-items: center;
-`;
-
-const Img = styled.img`
-  height: 3rem;
-  margin: 8px;
-  pointer-events: all;
-  cursor: pointer;
 `;
 
 interface IProps {
   next?: string;
+  nextName?: string;
 }
 
 export default (props: IProps) => {
   const history = useHistory();
   return (
-    <Container>
-      <Img src={back} alt="back" onClick={() => history.goBack()} />
-      <Img
-        src={next}
-        alt="next"
-        onClick={() => history.push(props.next ? props.next : "/")}
-      />
-    </Container>
+    <Between>
+      <Button className="hvr-backward" onClick={() => history.goBack()}>
+        <MdArrowBack />
+      </Button>
+      <Button
+        className="hvr-forward"
+        onClick={() => history.push(props.next ?? "/")}
+      >
+        {props.nextName ?? <MdHome />}
+      </Button>
+    </Between>
   );
 };

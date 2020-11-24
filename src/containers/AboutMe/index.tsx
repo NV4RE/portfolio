@@ -1,35 +1,14 @@
 import React from "react";
-import { useHistory } from "react-router-dom";
 import styled from "styled-components";
+import Body from "../../components/Body";
+import Navigator from "../../components/Navigator";
 
 const Container = styled.div`
   display: flex;
-  flex-flow: column nowrap;
   width: 100vw;
-  min-height: 100vh;
+  height: 100vh;
   justify-content: center;
   align-items: center;
-
-  padding: 0;
-  margin: 0;
-  overflow: auto;
-`;
-
-const Body = styled.div`
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: flex-start;
-  overflow: auto;
-
-  padding: 65px 40px 40px;
-  margin: 50px 20vw;
-  height: fit-content;
-  max-width: 1024px;
-  background-color: #f6f6f6;
-
-  @media (max-width: 768px) {
-    margin: 32px 15px;
-  }
 `;
 
 const Title = styled.p`
@@ -55,25 +34,7 @@ const Big = styled.span`
   font-weight: 800;
 `;
 
-const Between = styled.div`
-  display: flex;
-  flex: 1 0 100%;
-  width: 100%;
-
-  justify-content: space-between;
-`;
-
-const Button = styled.div`
-  font-family: "Nurom-Bold";
-  padding: 8px 14px;
-  margin: 20px 0 0 0;
-  background-color: #1b262c;
-  color: #f6f6f6;
-  cursor: pointer;
-`;
-
 export default () => {
-  const history = useHistory();
   return (
     <Container>
       <Body>
@@ -100,17 +61,7 @@ export default () => {
           have any cool projects, do get in touch with me even if it’s only for
           a cup of tea!
         </Paragraph>
-        <Between>
-          <Button className="hvr-backward" onClick={() => history.goBack()}>
-            {"<<"}
-          </Button>
-          <Button
-            className="hvr-forward"
-            onClick={() => history.push("/experiences")}
-          >
-            Whom I worked for
-          </Button>
-        </Between>
+        <Navigator next="summary" nextName="Summary" />
       </Body>
     </Container>
   );

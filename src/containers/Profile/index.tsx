@@ -1,6 +1,8 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
 import styled from "styled-components";
+import Body from "../../components/Body";
+import Button from "../../components/Button";
 import profile from "../../resources/images/profile.jpg";
 
 const Container = styled.div`
@@ -9,20 +11,6 @@ const Container = styled.div`
   height: 100vh;
   justify-content: center;
   align-items: center;
-`;
-
-const Card = styled.div`
-  display: flex;
-  flex-flow: column nowrap;
-  min-width: 10rem;
-  max-width: 20rem;
-  align-items: center;
-  background-color: #fbf7f0;
-  border: 0px solid #fbf7f0;
-  border-radius: 8px;
-  box-shadow: 3px 10px 27px -8px rgba(0, 0, 0, 0.9);
-  padding: 2rem;
-  margin: 0 40px;
 `;
 
 const ProfilePicture = styled.img`
@@ -48,21 +36,11 @@ const Title = styled.p`
   color: #555555;
 `;
 
-const Button = styled.div`
-  font-family: "Nurom-Bold";
-  padding: 8px 14px;
-  margin: 20px 0 0 0;
-  border-radius: 4px;
-  background-color: #1b262c;
-  color: #f6f6f6;
-  cursor: pointer;
-`;
-
 export default () => {
   const history = useHistory();
   return (
     <Container>
-      <Card>
+      <Body>
         <ProfilePicture src={profile} />
 
         <Name>Tossaporn Temsong</Name>
@@ -71,7 +49,7 @@ export default () => {
         <Button className="hvr-grow" onClick={() => history.push("/aboutme")}>
           Know me better ?
         </Button>
-      </Card>
+      </Body>
     </Container>
   );
 };

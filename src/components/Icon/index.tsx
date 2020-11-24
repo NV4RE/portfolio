@@ -1,64 +1,44 @@
 import React from "react";
 import styled from "styled-components";
-import github from "../../resources/svg/github.svg";
-import gitlab from "../../resources/svg/gitlab.svg";
-import gmail from "../../resources/svg/gmail.svg";
-import instagram from "../../resources/svg/instagram.svg";
-import linkedin from "../../resources/svg/linkedin.svg";
 
 interface IProps {
-  link?: string;
+  link: string;
+  label: string;
+  icon: React.ReactNode;
 }
 
-const Img = styled.img`
-  height: 2rem;
+const IconContainer = styled.div`
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  color: #f6f6f6;
+  cursor: pointer;
+
+  box-sizing: border-box;
+  width: 100%;
+
+  padding: 10px;
+  margin: 6px 0;
+  border-radius: 8px;
+  background-color: #1b262c;
+  box-shadow: 3px 4px 10px -3px rgba(0, 0, 0, 0.9);
 `;
 
-const Image = (
-  props: React.DetailedHTMLProps<
-    React.ImgHTMLAttributes<HTMLImageElement>,
-    HTMLImageElement
-  >
-) => {
-  return <Img {...props} />;
-};
+const Label = styled.p`
+  padding: 0 0 0 7px;
+  margin: 0;
+  text-decoration: none;
+  text-align: center;
+`;
 
-export const Github = (props: IProps) => {
+export default (props: IProps) => {
   return (
-    <a href={props.link} target="_blank" rel="noopener noreferrer">
-      <Image src={github} alt="github" />
-    </a>
-  );
-};
-
-export const Gitlab = (props: IProps) => {
-  return (
-    <a href={props.link} target="_blank" rel="noopener noreferrer">
-      <Image src={gitlab} alt="gitlab" />
-    </a>
-  );
-};
-
-export const Gmail = (props: IProps) => {
-  return (
-    <a href={props.link} target="_blank" rel="noopener noreferrer">
-      <Image src={gmail} alt="gmail" />
-    </a>
-  );
-};
-
-export const Linkedin = (props: IProps) => {
-  return (
-    <a href={props.link} target="_blank" rel="noopener noreferrer">
-      <Image src={linkedin} alt="linkedin" />
-    </a>
-  );
-};
-
-export const Instagram = (props: IProps) => {
-  return (
-    <a href={props.link} target="_blank" rel="noopener noreferrer">
-      <Image src={instagram} alt="instagram" />
-    </a>
+    <IconContainer
+      className="hvr-float"
+      onClick={() => window.open(props.link, "_blank", "noopener noreferrer")}
+    >
+      {props.icon} <Label>{props.label}</Label>
+    </IconContainer>
   );
 };

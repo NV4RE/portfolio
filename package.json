@@ -12,6 +12,7 @@
     "hover.css": "^2.3.2",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
+    "react-icons": "^3.11.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3",
     "react-vertical-timeline-component": "^3.3.0",
