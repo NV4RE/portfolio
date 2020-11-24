@@ -11,6 +11,7 @@ import Summary from "./containers/Summary";
 const Container = styled.div`
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
   width: 100vw;
   height: 100vh;
   overflow-x: hidden;
