@@ -5,10 +5,10 @@ export default styled.div`
   flex-flow: row nowrap;
   justify-content: flex-start;
   align-items: center;
-  color: #1c2b2d;
+  color: #f4f4f2;
 
   margin: 3px;
   padding: 5px;
   border-radius: 3px;
-  background-color: #cfd3ce;
+  background-color: #1c2b2d;
 `;

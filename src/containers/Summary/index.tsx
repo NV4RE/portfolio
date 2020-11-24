@@ -14,12 +14,13 @@ interface ISkill {
 
 const Input = styled.input`
   box-sizing: border-box;
-  height: 32px;
-  margin: 2px 8px 30px 8px;
+  height: 28px;
+  margin: 2px 2px;
 
   border: 1px solid #ccc;
   border-radius: 4px;
-  font-size: 1.2rem;
+  font-size: 1rem;
+  background-color: inherit;
 `;
 
 const Content = styled.div`
@@ -319,8 +320,11 @@ export default () => {
   return (
     <Container>
       <Body>
-        <Input onChange={(e) => setSearch(e.target.value.toLowerCase())} />
         <Content>
+          <Input
+            placeholder="Looking for something ?"
+            onChange={(e) => setSearch(e.target.value.toLowerCase())}
+          />
           {filtered.map((s) => (
             <Tag key={s.name}>{s.name}</Tag>
           ))}

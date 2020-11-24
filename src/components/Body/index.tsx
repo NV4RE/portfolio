@@ -9,7 +9,7 @@ export default styled.div`
   min-width: 210px;
   max-width: 1024px;
 
-  background-color: #fbf7f0;
+  background-color: #e8e8e8;
   border-radius: 8px;
   box-shadow: 3px 10px 27px -8px rgba(0, 0, 0, 0.9);
   padding: 40px;
