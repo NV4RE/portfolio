@@ -1,4 +1,5 @@
 import React from "react";
+import { FaMediumM } from "react-icons/fa";
 import {
   FiGithub,
   FiGitlab,
@@ -37,7 +38,12 @@ export default () => {
           label="linkedin.com/t-temsong"
         />
         <Icon
-          link="https://www.instagram.com/nv.4re/"
+          link="https://medium.com/@NV4RE"
+          icon={<FaMediumM />}
+          label="medium.com/@NV4RE"
+        />
+        <Icon
+          link="https://www.instagram.com/nv.4re"
           icon={<FiInstagram />}
           label="@nv.4re"
         />
