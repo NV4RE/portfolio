@@ -13,7 +13,7 @@ const Between = styled.div`
 
 interface IProps {
   next?: string;
-  nextName?: string;
+  label?: React.ReactNode;
 }
 
 export default (props: IProps) => {
@@ -27,7 +27,7 @@ export default (props: IProps) => {
         className="hvr-forward"
         onClick={() => history.push(props.next ?? "/")}
       >
-        {props.nextName ?? <MdHome />}
+        {props.label ?? <MdHome />}
       </Button>
     </Between>
   );

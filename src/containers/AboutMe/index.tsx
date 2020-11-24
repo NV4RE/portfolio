@@ -1,4 +1,5 @@
 import React from "react";
+import { MdApps } from "react-icons/md";
 import styled from "styled-components";
 import Body from "../../components/Body";
 import Navigator from "../../components/Navigator";
@@ -47,7 +48,7 @@ export default () => {
             for a cup of tea!
           </Paragraph>
         </Content>
-        <Navigator next="summary" nextName="Summary" />
+        <Navigator next="summary" label={<MdApps />} />
       </Body>
     </Container>
   );
