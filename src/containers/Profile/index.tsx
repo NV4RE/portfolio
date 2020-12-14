@@ -7,7 +7,6 @@ import Container from "../../components/Container";
 import Tag from "../../components/Tag";
 import { Big } from "../../components/Typography";
 import { resumeContext } from "../../context/resume";
-import profile from "../../resources/images/profile.jpg";
 
 const ProfilePicture = styled.img`
   border-radius: 50%;
@@ -22,7 +21,7 @@ const Profile = () => {
   return (
     <Container>
       <Body>
-        <ProfilePicture src={profile} />
+        <ProfilePicture src={resumeData?.profile.profile_img} />
 
         <Big>
           {resumeData?.profile.f_name} {resumeData?.profile.l_name}
