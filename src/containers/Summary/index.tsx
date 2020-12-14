@@ -9,8 +9,10 @@ import { resumeContext } from "../../context/resume";
 const Input = styled.input`
   box-sizing: border-box;
   height: 28px;
-  width: 185px;
+  width: 220px;
   margin: 2px 2px;
+  padding: 0 8px;
+  text-align: center;
 
   border: 1px solid #ccc;
   border-radius: 4px;

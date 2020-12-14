@@ -14,7 +14,7 @@ const ResumeProvider = (props: IProps) => {
   useEffect(() => {
     setTimeout(() => {
       setResume(data);
-    }, 2000);
+    }, 200);
   }, []);
 
   return (

@@ -1,5 +1,5 @@
 import "hover.css/css/hover-min.css";
-import React from "react";
+import React, { useEffect } from "react";
 import { Redirect, Route, Switch, useLocation } from "react-router-dom";
 import styled from "styled-components";
 import AboutMe from "./containers/AboutMe";
@@ -34,6 +34,10 @@ const Container = styled.div`
 
 const Router = () => {
   const location = useLocation();
+
+  useEffect(() => {
+    setTimeout(() => window.scrollTo(0, 0), 1000);
+  }, [location.pathname]);
 
   return (
     <Container>

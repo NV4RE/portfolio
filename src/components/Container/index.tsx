@@ -6,4 +6,5 @@ export default styled.div`
   min-height: 100vh;
   justify-content: center;
   align-items: center;
+  margin: 20px 0;
 `;
