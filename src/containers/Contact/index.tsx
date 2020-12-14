@@ -1,52 +1,21 @@
-import React from "react";
-import { FaMediumM } from "react-icons/fa";
-import {
-  FiGithub,
-  FiGitlab,
-  FiInstagram,
-  FiLinkedin,
-  FiMail,
-} from "react-icons/fi";
+import React, { useContext } from "react";
+import { FiMail } from "react-icons/fi";
 import Body from "../../components/Body";
+import ContactLink from "../../components/ContactLink";
 import Container from "../../components/Container";
-import Icon from "../../components/Icon";
 import Navigator from "../../components/Navigator";
+import { resumeContext } from "../../context/resume";
 
 export default () => {
+  const resumeData = useContext(resumeContext);
   return (
     <Container>
       <Body>
-        <Icon
-          link="mailto:t.temsong@gmail.com"
-          icon={<FiMail />}
-          label="t.temsong@gmail.com"
-        />
-        <Icon
-          link="https://github.com/NV4RE"
-          icon={<FiGithub />}
-          label="github.com/NV4RE"
-        />
-        <Icon
-          link="https://gitlab.com/NV4RE"
-          icon={<FiGitlab />}
-          label="gitlab.com/NV4RE"
-        />
-
-        <Icon
-          link="https://www.linkedin.com/in/t-temsong"
-          icon={<FiLinkedin />}
-          label="linkedin.com/t-temsong"
-        />
-        <Icon
-          link="https://medium.com/@NV4RE"
-          icon={<FaMediumM />}
-          label="medium.com/@NV4RE"
-        />
-        <Icon
-          link="https://www.instagram.com/nv.4re"
-          icon={<FiInstagram />}
-          label="@nv.4re"
-        />
+        {resumeData?.contacts.map((c) => {
+          return (
+            <ContactLink link={c.link} icon={<FiMail />} label={c.label} />
+          );
+        })}
         <Navigator />
       </Body>
     </Container>

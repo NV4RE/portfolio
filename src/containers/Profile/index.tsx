@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useHistory } from "react-router-dom";
 import styled from "styled-components";
 import Body from "../../components/Body";
@@ -6,6 +6,7 @@ import Button from "../../components/Button";
 import Container from "../../components/Container";
 import Tag from "../../components/Tag";
 import { Big } from "../../components/Typography";
+import { resumeContext } from "../../context/resume";
 import profile from "../../resources/images/profile.jpg";
 
 const ProfilePicture = styled.img`
@@ -16,13 +17,17 @@ const ProfilePicture = styled.img`
 
 export default () => {
   const history = useHistory();
+  const resumeData = useContext(resumeContext);
+
   return (
     <Container>
       <Body>
         <ProfilePicture src={profile} />
 
-        <Big>Tossaporn Temsong</Big>
-        <Tag>Full-Stack Developer</Tag>
+        <Big>
+          {resumeData?.profile.f_name} {resumeData?.profile.l_name}
+        </Big>
+        <Tag>{resumeData?.profile.jd}</Tag>
 
         <Button className="hvr-grow" onClick={() => history.push("/aboutme")}>
           Know me better ?
