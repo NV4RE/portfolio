@@ -8,5 +8,6 @@ npm start
 
 ```sh
 npm run build
-gsutil rsync -R ./build  gs://portfolio.nv4re.com
+cp ./build/index.html  ./build/404.html
+npm run deploy:gh-pages
 ```
