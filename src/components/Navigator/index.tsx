@@ -12,23 +12,30 @@ const Between = styled.div`
 `;
 
 interface IProps {
-  next?: string;
-  label?: React.ReactNode;
+  pages: string[];
 }
 
 export default (props: IProps) => {
   const history = useHistory();
+  const pn = history.location.pathname.split("/");
+  const currentPage = pn[pn.length - 1];
+
+  const nextPage = getNextPage(currentPage, props.pages);
+  console.log(nextPage, currentPage, props.pages);
+
   return (
     <Between>
       <Button className="hvr-backward" onClick={() => history.goBack()}>
         <MdArrowBack />
       </Button>
-      <Button
-        className="hvr-forward"
-        onClick={() => history.push(props.next ?? "/")}
-      >
-        {props.label ?? <MdHome />}
+      <Button className="hvr-forward" onClick={() => history.push(nextPage)}>
+        <MdHome />
       </Button>
     </Between>
   );
+};
+
+const getNextPage = (currentPage: string, pages: string[]): string => {
+  const currentIndex = pages.indexOf(currentPage);
+  return pages[currentIndex + 1] || "/";
 };

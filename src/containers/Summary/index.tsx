@@ -1,5 +1,4 @@
 import React, { useContext, useEffect, useState } from "react";
-import { MdCall } from "react-icons/md";
 import styled from "styled-components";
 import Body from "../../components/Body";
 import Container from "../../components/Container";
@@ -58,7 +57,7 @@ export default () => {
             <Tag key={s.name}>{s.name}</Tag>
           ))}
         </Content>
-        <Navigator next="/contact" label={<MdCall />} />
+        <Navigator pages={resumeData?.pages ?? []} />
       </Body>
     </Container>
   );

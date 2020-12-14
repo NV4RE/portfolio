@@ -13,10 +13,15 @@ export default () => {
       <Body>
         {resumeData?.contacts.map((c) => {
           return (
-            <ContactLink link={c.link} icon={<FiMail />} label={c.label} />
+            <ContactLink
+              key={c.link}
+              link={c.link}
+              icon={<FiMail />}
+              label={c.label}
+            />
           );
         })}
-        <Navigator />
+        <Navigator pages={resumeData?.pages ?? []} />
       </Body>
     </Container>
   );

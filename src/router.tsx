@@ -4,6 +4,7 @@ import { Redirect, Route, Switch, useLocation } from "react-router-dom";
 import styled from "styled-components";
 import AboutMe from "./containers/AboutMe";
 import Contact from "./containers/Contact";
+import Experiences from "./containers/Experiences";
 import Profile from "./containers/Profile";
 import Summary from "./containers/Summary";
 
@@ -40,6 +41,7 @@ export default () => {
         <Route exact path="/profile" component={Profile} />
         <Route exact path="/aboutMe" component={AboutMe} />
         <Route exact path="/summary" component={Summary} />
+        <Route exact path="/experiences" component={Experiences} />
         <Route exact path="/contact" component={Contact} />
         <Route path="/">
           <Redirect to="/profile" />

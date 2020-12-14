@@ -18,7 +18,7 @@ export default () => {
   return (
     <Container>
       <Body>
-        <Title>About me</Title>
+        <Title>Experiences</Title>
         <Content>
           {resumeData?.about_me.map((line, index) => {
             return (
