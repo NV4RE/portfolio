@@ -1,6 +1,8 @@
+import * as fns from "date-fns";
 import React from "react";
 import styled from "styled-components";
 import { Experience as IExperience } from "../../types/resume";
+import { Big, Paragraph, Small } from "../Typography";
 
 interface IProps extends IExperience {}
 
@@ -8,7 +10,7 @@ const IconContainer = styled.div`
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
   color: #f6f6f6;
 
   box-sizing: border-box;
@@ -27,15 +29,36 @@ const Avartar = styled.img`
   margin: 0 0 15px 0;
 `;
 
+const Body = styled.div`
+  display: flex;
+  flex-flow: column nowrap;
+  margin: 12px;
+`;
+
 const Experience = (props: IProps) => {
   return (
     <IconContainer>
       <Avartar src={props.logo} />
-      {props.company_name}
-      {props.job_title}
-      {props.description}
+      <Body>
+        <Big>{props.job_title}</Big>
+        <Paragraph>
+          {props.company_name}{" "}
+          <Small>
+            {formatDate(props.from)} — {formatDate(props.to)}
+          </Small>
+        </Paragraph>
+
+        {props.description}
+      </Body>
     </IconContainer>
   );
+};
+
+const formatDate = (d: any): string => {
+  if (!d) {
+    return "now";
+  }
+  return fns.format(d, "MMM/yyyy");
 };
 
 export default Experience;

@@ -6,7 +6,7 @@ export const Title = styled.p`
   margin: 0;
   font-size: 2.2rem;
   white-space: nowrap;
-  color: #222222;
+  /* color: #222222; */
 `;
 
 export const Paragraph = styled.p`
@@ -16,10 +16,15 @@ export const Paragraph = styled.p`
   font-weight: 400;
   word-wrap: break-word;
 
-  color: #1c2b2d;
+  /* color: #1c2b2d; */
 `;
 
 export const Big = styled.span`
   font-size: 1.2em;
   font-weight: 800;
+`;
+
+export const Small = styled.span`
+  font-size: 0.8em;
+  font-weight: 200;
 `;
