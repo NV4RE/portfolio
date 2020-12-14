@@ -32,7 +32,7 @@ const Container = styled.div`
   }
 `;
 
-export default () => {
+const Router = () => {
   const location = useLocation();
 
   return (
@@ -50,3 +50,5 @@ export default () => {
     </Container>
   );
 };
+
+export default Router;

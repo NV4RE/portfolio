@@ -32,7 +32,7 @@ const Label = styled.p`
   text-align: center;
 `;
 
-export default (props: IProps) => {
+const ContactLink = (props: IProps) => {
   return (
     <IconContainer
       className="hvr-float"
@@ -42,3 +42,5 @@ export default (props: IProps) => {
     </IconContainer>
   );
 };
+
+export default ContactLink;

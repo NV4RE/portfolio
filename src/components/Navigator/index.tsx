@@ -15,7 +15,7 @@ interface IProps {
   pages: string[];
 }
 
-export default (props: IProps) => {
+const Navigator = (props: IProps) => {
   const history = useHistory();
   const pn = history.location.pathname.split("/");
   const currentPage = pn[pn.length - 1];
@@ -35,6 +35,7 @@ export default (props: IProps) => {
   );
 };
 
+export default Navigator;
 const getNextPage = (currentPage: string, pages: string[]): string => {
   const currentIndex = pages.indexOf(currentPage);
   return pages[currentIndex + 1] || "/";

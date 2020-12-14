@@ -16,6 +16,10 @@ const Input = styled.input`
   font-size: 1rem;
   background-color: inherit;
   -webkit-appearance: none;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 const Content = styled.div`

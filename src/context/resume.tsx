@@ -8,7 +8,7 @@ interface IProps {
   children: React.ReactNode;
 }
 
-export default (props: IProps) => {
+const ResumeProvider = (props: IProps) => {
   const [resume, setResume] = useState<Resume | undefined>(undefined);
 
   useEffect(() => {
@@ -23,3 +23,5 @@ export default (props: IProps) => {
     </resumeContext.Provider>
   );
 };
+
+export default ResumeProvider;
