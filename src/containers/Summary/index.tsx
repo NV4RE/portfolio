@@ -29,7 +29,7 @@ const Content = styled.div`
   }
 `;
 
-export default () => {
+const Summary = () => {
   const resumeData = useContext(resumeContext);
   const [filtered, setFiltered] = useState(resumeData?.skills ?? []);
   const [search, setSearch] = useState("");
@@ -62,3 +62,5 @@ export default () => {
     </Container>
   );
 };
+
+export default Summary;

@@ -6,7 +6,7 @@ import Container from "../../components/Container";
 import Navigator from "../../components/Navigator";
 import { resumeContext } from "../../context/resume";
 
-export default () => {
+const Contact = () => {
   const resumeData = useContext(resumeContext);
   return (
     <Container>
@@ -26,3 +26,5 @@ export default () => {
     </Container>
   );
 };
+
+export default Contact;

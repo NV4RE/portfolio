@@ -11,8 +11,7 @@ const Content = styled.div`
   flex-flow: row wrap;
   justify-content: flex-start;
 `;
-
-export default () => {
+const Experiences = () => {
   const resumeData = useContext(resumeContext);
 
   return (
@@ -34,3 +33,5 @@ export default () => {
     </Container>
   );
 };
+
+export default Experiences;

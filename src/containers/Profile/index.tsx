@@ -15,7 +15,7 @@ const ProfilePicture = styled.img`
   margin: 0 0 15px 0;
 `;
 
-export default () => {
+const Profile = () => {
   const history = useHistory();
   const resumeData = useContext(resumeContext);
 
@@ -36,3 +36,5 @@ export default () => {
     </Container>
   );
 };
+
+export default Profile;

@@ -12,7 +12,7 @@ const Content = styled.div`
   justify-content: flex-start;
 `;
 
-export default () => {
+const AboutMe = () => {
   const resumeData = useContext(resumeContext);
 
   return (
@@ -34,3 +34,5 @@ export default () => {
     </Container>
   );
 };
+
+export default AboutMe;
