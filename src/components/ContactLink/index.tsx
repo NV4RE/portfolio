@@ -1,10 +1,10 @@
 import React from "react";
 import styled from "styled-components";
+import Icon from "../Icon";
 
 interface IProps {
   link: string;
   label: string;
-  icon: React.ReactNode;
 }
 
 const IconContainer = styled.div`
@@ -38,9 +38,16 @@ const ContactLink = (props: IProps) => {
       className="hvr-float"
       onClick={() => window.open(props.link, "_blank", "noopener noreferrer")}
     >
-      {props.icon} <Label>{props.label}</Label>
+      <Icon name={getDomainFromUrl(props.link)} /> <Label>{props.label}</Label>
     </IconContainer>
   );
+};
+
+const getDomainFromUrl = (url: string): string => {
+  if (/mailto:/gi.test(url)) {
+    return "mail";
+  }
+  return new URL(url).hostname;
 };
 
 export default ContactLink;
