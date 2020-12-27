@@ -17,7 +17,7 @@ const AboutMe = () => {
 
   return (
     <Container>
-      <Body>
+      <Body loading={!resumeData}>
         <Title>About me</Title>
         <Content>
           {resumeData?.about_me.map((line, index) => {

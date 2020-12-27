@@ -20,7 +20,7 @@ const Profile = () => {
 
   return (
     <Container>
-      <Body>
+      <Body loading={!resumeData}>
         <ProfilePicture src={resumeData?.profile.profile_img} />
 
         <Big>

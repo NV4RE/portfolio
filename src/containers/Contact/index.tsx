@@ -9,7 +9,7 @@ const Contact = () => {
   const resumeData = useContext(resumeContext);
   return (
     <Container>
-      <Body>
+      <Body loading={!resumeData}>
         {resumeData?.contacts.map((c) => {
           return <ContactLink key={c.link} link={c.link} label={c.label} />;
         })}

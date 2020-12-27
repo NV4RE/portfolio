@@ -1,6 +1,8 @@
+import React from "react";
+import BounceLoader from "react-spinners/BounceLoader";
 import styled from "styled-components";
 
-export default styled.div`
+const StyledBody = styled.div`
   display: flex;
 
   flex-flow: column nowrap;
@@ -21,3 +23,18 @@ export default styled.div`
     margin: 32px 15px;
   }
 `;
+
+interface IProps {
+  loading?: boolean;
+  children: React.ReactNode;
+}
+
+const Body = (props: IProps) => {
+  return (
+    <StyledBody>
+      {props.loading ? <BounceLoader /> : <>{props.children}</>}
+    </StyledBody>
+  );
+};
+
+export default Body;

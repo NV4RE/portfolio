@@ -17,7 +17,7 @@ const Experiences = () => {
 
   return (
     <Container>
-      <Body>
+      <Body loading={!resumeData}>
         <Title>Experiences</Title>
         <Content>
           {resumeData?.experiences.map((exp, index) => {
