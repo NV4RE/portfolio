@@ -28,7 +28,15 @@ const Profile = () => {
         </Big>
         <Tag>{resumeData?.profile.jd}</Tag>
 
-        <Button className="hvr-grow" onClick={() => history.push("/aboutme")}>
+        <Button
+          className="hvr-grow"
+          onClick={() =>
+            history.push({
+              pathname: "/aboutme",
+              search: window.location.search,
+            })
+          }
+        >
           Know me better ?
         </Button>
       </Body>

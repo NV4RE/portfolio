@@ -48,7 +48,7 @@ const Router = () => {
         <Route exact path="/experiences" component={Experiences} />
         <Route exact path="/contact" component={Contact} />
         <Route path="/">
-          <Redirect to="/profile" />
+          <Redirect to={`/profile${window.location.search}`} />
         </Route>
       </Switch>
     </Container>

@@ -27,10 +27,26 @@ const Navigator = (props: IProps) => {
 
   return (
     <Between>
-      <Button className="hvr-backward" onClick={() => history.push(prevPage)}>
+      <Button
+        className="hvr-backward"
+        onClick={() =>
+          history.push({
+            pathname: prevPage,
+            search: window.location.search,
+          })
+        }
+      >
         <Icon name={prevPage} />
       </Button>
-      <Button className="hvr-forward" onClick={() => history.push(nextPage)}>
+      <Button
+        className="hvr-forward"
+        onClick={() =>
+          history.push({
+            pathname: nextPage,
+            search: window.location.search,
+          })
+        }
+      >
         <Icon name={nextPage} />
       </Button>
     </Between>
