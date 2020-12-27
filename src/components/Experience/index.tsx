@@ -21,12 +21,25 @@ const IconContainer = styled.div`
   border-radius: 8px;
   background-color: #1b262c;
   box-shadow: 3px 4px 10px -3px rgba(0, 0, 0, 0.9);
+
+  @media (max-width: 768px) {
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
 const Avartar = styled.img`
   border-radius: 5px;
   height: 45px;
   margin: 0 0 15px 0;
+  background-color: #fff;
+  border: solid #fff 10px;
+
+  @media (max-width: 768px) {
+    height: 80px;
+    border-width: 20px;
+  }
 `;
 
 const Body = styled.div`

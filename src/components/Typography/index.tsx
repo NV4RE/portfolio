@@ -12,7 +12,7 @@ export const Title = styled.p`
 export const Paragraph = styled.p`
   padding: 18px 0 4px 0;
   margin: 0;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 400;
   word-wrap: break-word;
 
@@ -20,7 +20,7 @@ export const Paragraph = styled.p`
 `;
 
 export const Big = styled.span`
-  font-size: 1.2em;
+  font-size: 1.1em;
   font-weight: 800;
 `;
 
