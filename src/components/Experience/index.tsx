@@ -24,7 +24,7 @@ const IconContainer = styled.div`
 `;
 
 const Avartar = styled.img`
-  border-radius: 50%;
+  border-radius: 5px;
   height: 45px;
   margin: 0 0 15px 0;
 `;
