@@ -14,8 +14,11 @@ const ResumeProvider = (props: IProps) => {
   useEffect(() => {
     (async () => {
       try {
+        const urlParams = new URLSearchParams(window.location.search);
         const res = await axios.get(
-          `${process.env["REACT_APP_BACKEND_URL"]}/resume.json`
+          `${
+            process.env["REACT_APP_BACKEND_URL"]
+          }/resume.json?k=${urlParams.get("k")}`
         );
         setResume(res.data);
       } catch (error) {
