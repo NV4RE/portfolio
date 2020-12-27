@@ -1,5 +1,5 @@
 import React from "react";
-import BounceLoader from "react-spinners/BounceLoader";
+import PuffLoader from "react-spinners/PuffLoader";
 import styled from "styled-components";
 
 const StyledBody = styled.div`
@@ -32,7 +32,11 @@ interface IProps {
 const Body = (props: IProps) => {
   return (
     <StyledBody>
-      {props.loading ? <BounceLoader /> : <>{props.children}</>}
+      {props.loading ? (
+        <PuffLoader size={120} color="#456268" />
+      ) : (
+        <>{props.children}</>
+      )}
     </StyledBody>
   );
 };

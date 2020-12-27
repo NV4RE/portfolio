@@ -54,10 +54,10 @@ const Summary = () => {
 
   return (
     <Container>
-      <Body>
+      <Body loading={!resumeData}>
         <Content>
           <Input
-            placeholder="Looking for something ?"
+            placeholder="Enter some keyword"
             onChange={(e) => setSearch(e.target.value.toLowerCase())}
           />
           {filtered.map((s) => (
