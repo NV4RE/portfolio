@@ -30,6 +30,7 @@ const Label = styled.p`
   margin: 0;
   text-decoration: none;
   text-align: center;
+  font-weight: 800;
 `;
 
 const ContactLink = (props: IProps) => {

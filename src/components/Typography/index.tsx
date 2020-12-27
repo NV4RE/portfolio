@@ -6,22 +6,19 @@ export const Title = styled.p`
   margin: 0;
   font-size: 2.2rem;
   white-space: nowrap;
-  /* color: #222222; */
 `;
 
 export const Paragraph = styled.p`
   padding: 18px 0 4px 0;
   margin: 0;
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: 800;
   word-wrap: break-word;
-
-  /* color: #1c2b2d; */
 `;
 
 export const Big = styled.span`
-  font-size: 1.1em;
-  font-weight: 800;
+  font-family: "Nurom-Bold";
+  font-size: 1.2em;
 `;
 
 export const Small = styled.span`

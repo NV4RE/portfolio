@@ -13,6 +13,7 @@ const Input = styled.input`
   margin: 2px 2px;
   padding: 0 8px;
   text-align: center;
+  font-weight: 800;
 
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -29,11 +30,6 @@ const Content = styled.div`
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
-
-  ::after {
-    content: "";
-    flex: auto;
-  }
 `;
 
 const Summary = () => {
