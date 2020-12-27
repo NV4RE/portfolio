@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { createContext, useEffect, useState } from "react";
+import { toast } from "react-toastify";
 import { Resume } from "../types/resume";
 
 export const resumeContext = createContext<Resume | undefined>(undefined);
@@ -22,8 +23,12 @@ const ResumeProvider = (props: IProps) => {
         );
         setResume(res.data);
       } catch (error) {
-        console.log(error);
-        alert(`Ohhh, think my backend are down :(`);
+        console.log(error.response);
+        if (error.response?.data) {
+          toast(`Cannot fetch data: ${error.response?.data}`);
+        } else {
+          toast(`Ohhh, think my backend are down :(`);
+        }
       }
     })();
   }, []);
